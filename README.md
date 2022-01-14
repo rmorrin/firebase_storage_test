@@ -1,16 +1,8 @@
 # firebase_storage_test
 
-A new Flutter project.
+A sample Flutter project to experiment with [Firebase cloud storage](https://firebase.google.com/docs/storage).
 
-## Getting Started
+Goals:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Download assets (images/mp3s) archive, extract and store locally for use
+* Optimise downloading by using md5 hash to determine if remote archive has changed
