@@ -1,7 +1,11 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sklepboard/cubit/files_cubit.dart';
+import 'package:sklepboard/my_home_page.dart';
+import 'package:sklepboard/repositories/assets_repository_impl.dart';
 
-import 'my_home_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -24,7 +28,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: BlocProvider<FilesCubit>(
+        create: (context) => FilesCubit(
+          repository: AssetsRepositoryImpl(
+            storage: FirebaseStorage.instance,
+          ),
+        )..loadFiles(),
+        child: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
