@@ -1,0 +1,19 @@
+{
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    // Remove .fvm files from search
+    "search.exclude": {
+      "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+      "**/.fvm": true
+    },
+    "workbench.colorCustomizations": {
+      "sash.hoverBorder": "#ab307e",
+      "titleBar.activeBackground": "#832561",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#83256199",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#832561"
+  }
